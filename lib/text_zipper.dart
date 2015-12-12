@@ -6,6 +6,10 @@
 /// This is an awesome library. More dartdocs go here.
 library text_zipper;
 
-// TODO: Export any libraries intended for clients of this package.
+import 'package:quiver_check/check.dart';
 
-export 'src/text_zipper_base.dart';
+import 'src/functional_list.dart';
+
+part 'src/position.dart';
+part 'src/text_zipper.dart';
+part 'src/text_zipper_ops.dart';
