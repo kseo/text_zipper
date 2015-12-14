@@ -4,8 +4,9 @@
 part of text_zipper;
 
 /// Creates a [TextZipper] from the given [iterable] of String.
-TextZipper<String> stringZipper(Iterable<String> iterable) =>
-    new TextZipper<String>._makeZipper(new _StringTextZipperOps(), iterable);
+TextZipper<String> stringZipper(String text) =>
+    new TextZipper<String>._makeZipper(
+        new _StringTextZipperOps(), text.split('\n'));
 
 /// Provides a two-dimensional text zipper data structure.
 class TextZipper<T> {

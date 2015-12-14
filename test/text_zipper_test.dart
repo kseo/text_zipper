@@ -15,8 +15,7 @@ ABC
 
 void main() {
   group('A group of tests', () {
-    final lines = text.split('\n');
-    TextZipper<String> tz = stringZipper(lines);
+    TextZipper<String> tz = stringZipper(text);
 
     group('Query', () {
       test('lineCount', () {
@@ -48,7 +47,8 @@ void main() {
       });
 
       test('lineLengths', () {
-        expect(tz.lineLengths, orderedEquals(lines.map((x) => x.length)));
+        expect(tz.lineLengths,
+            orderedEquals(text.split('\n').map((x) => x.length)));
       });
     });
 
